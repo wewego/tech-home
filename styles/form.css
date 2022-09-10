@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+:root {
+  --orange: #fe9c01;
+  --pad: 20px;
+  --marg: 15px;
+  --space: 5vh;
+  --fs: 16px;
+  --radius: 10px;
+  --dark: #160d26;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  background-color: var(--dark);
+  height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  width: 40%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 7px;
+  padding: 3% 1%;
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  min-width: 330px;
+}
+
+.form-title {
+  border-bottom: 3px solid var(--dark);
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
+.btn-submit {
+  background-color: var(--orange) !important;
+  color: #fff !important;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* *************Sign Up************ */
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+}
+
+input.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.finish {
+  background-color: #04aa6d;
+}
+
+/* Mobile version adjusment */
+@media screen and (max-width: 990px) {
+  form {
+    top: 40%;
+    max-height: 95vh;
+    overflow-y: scroll;
+  }
+}

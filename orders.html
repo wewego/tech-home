@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>My account / Orders</title>
+    <link rel="icon" href="img/Intersection-1@2x.png" type="icon">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/allfontawesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./pages/home.html" style="margin-right: 50px;">
+                <img src="img/Intersection-1@2x.png" alt="Intersection-1" style="width:135px ; height:45px;">
+            </a>
+
+            <!-- toggler button-->
+            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                <!--start Categories -->
+                <span class="nav-cards dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="font-weight: bold;" id="navbarDropdown">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" style="text-align: center;" id="container-div">
+                        
+                    </ul>
+                </span>
+                <!--End Categories -->
+
+                <!--Start Input search -->
+                <form class="d-flex" role="search" style="width: 50%;" id="search-form" onSubmit="return false;">
+                    <input class="form-control me-2 input-search-bar" type="search"
+                        placeholder="Search for products or brands" aria-label="Search" id="search-input">
+                    <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+                </form>
+                <!--End Input search -->
+
+                <!-- Start My Account -->
+                <span class="d-flex my-acccount">
+
+                    <a class="nav-link active" aria-current="page" href="my-account.html"
+                        style="font-weight: bold; font-size: 13px;"> <i class="fa-solid fa-circle-user"
+                            style="margin: 5px 5px 0 0;"></i> My
+                        Account</a>
+                </span>
+                <!-- End My Account -->
+
+                <!-- Start Cart -->
+                <span class="d-flex my-acccount">
+
+                    <a class="nav-link active" aria-current="page" href="cart.html"
+                        style="font-weight: bold; font-size: 13px;"><i class="fa-solid fa-cart-shopping"
+                            style="margin: 5px 5px 0 0;"></i> Cart</a>
+                    </li>
+                </span>
+                <!-- End Cart -->
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- END Navbar -->
+
+    <!-- Start Content -->
+    <div class="content home  producs-view" style="padding:50px 0 0 0;">
+        <div class="container" style="padding-bottom: 120px">
+
+            <!-- Start Back Button -->
+            <div style="margin: -20px 0 30px 0;">
+                <form>
+                    <input type="button" value="&lt; Back" style="color:rgb(112, 101, 101); font-weight:bold; background-color: transparent;
+                                border-color: transparent;" onclick="history.back()">
+                </form>
+            </div>
+            <!-- End Back Button -->
+
+
+
+            <div class="row">
+                <!--Start button My account-->
+                <div class="col-12 col-md-3 mb-5">
+                    <a href="my-account.html">
+                        <div style="background-color: #fff; border-color: #fff;">
+                            <button type=" button" class="btn buy-now  "
+                                style=" color: #000; border-color: transparent;">My account</button>
+                        </div>
+                    </a>
+                    <a href="orders.html">
+                        <div style="background-color: #EDEDED; border-color: #fff;">
+                            <button type=" button" class="btn buy-now  "
+                                style=" color: #000; border-color: transparent;"><b>Orders</b></button>
+                        </div>
+                    </a>
+
+                </div>
+                <!--End button My account -->
+
+
+                <!-- Start Orders-->
+                <div class="col-12 col-md-9 " style="margin-bottom: 10px; ">
+                    <div style="background-color: #fff;border-radius: 10px; border-color: #fff;padding: 20px;" id="order-container">
+                        <span style="font-weight:bold; font-size:20px ; margin-right: 10px;">Orders</span>
+
+
+                       
+
+                      
+
+                        
+
+                       
+
+                    </div>
+
+
+
+                </div>
+                <!-- End  Orders-->
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <img src="img/Intersection-2@2x.png" alt="Intersection-2@2x"
+                        style="width: 163px; height:55px; margin-bottom: 20px;">
+                    <p style="font-size: 15px;">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit&#44;
+                        sed do
+                        <br> eiusmod tempor
+                        incididunt
+                        ut
+                        labore et <br> dolore magna aliqua. Ut enim ad minim
+                    </p>
+                </div>
+                <div class="col-md-5 col-12 info">
+                    <a href="">Home</a>
+                    <a href="">Categories</a>
+                    <a href="">About Us</a>
+                </div>
+                <div class="col-md-3 col-12 touch">
+                    <h5 style="margin-bottom: 20px;">Get in touch</h5>
+                    <span>Feedback or questions&#63; just hit <br> us now</span>
+                    <div class="social" style="margin-top: 25px;">
+                        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Footer -->
+
+
+    <!-- Script -->
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+          function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+        if (getCookie("user_id") == ""){
+            top.location.href = "sign_in.html";
+        }
+        function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+         $('#navbarDropdown').click(function(){
+   $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/',
+  success: function (data, status, xhr) {
+    var html = ''
+    for (var i = 0; i<data.length; i++){
+      document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      setCookie("category" , data[i].id);
+      var cat = JSON.stringify(data[i].categoryName);
+      cat = cat.replace(/^"(.*)"$/, '$1');
+      html = html + '<li><a class="dropdown-cards" href="categories.html" style="color: #000; text-decoration: none;">'+cat+'</a></li>'
+      
+
+    }
+    $('#container-div').html(html);
+  }})
+});
+         //id="search-form" onSubmit="return false;"
+        $("#search-form").keypress(function(e){
+  document.cookie = "search=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  
+  if (e.keyCode == 13 && searchInput != ""){
+    var searchInput = $("#search-input").val()
+    setCookie("search" , searchInput ,200);
+    top.location.href="home.html"
+  }
+});
+        
+ $.ajax({
+              type: 'GET',
+              async: false,
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/orders/' + getCookie("user_id"),
+  success: function (data, status, xhr) {
+    for (var i = 0; i<data.length; i++){
+      var products_id = data[i].products_id
+      var quantities = data[i].quantities
+
+     
+
+      var quantities_arr = quantities.split(",");
+      var products_id_arr = products_id.split(",");
+      
+     
+      
+      for (var j = 0; j < products_id_arr.length; j++){
+        
+        
+
+         $.ajax({
+              type: 'GET',
+              async: false,
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/product/' + products_id_arr[j],
+  success: function (data, status, xhr) {
+
+    var imageUrl = "http://ec2-44-208-82-216.compute-1.amazonaws.com/storage/" + data.productImageURL
+
+    $("#order-container").append('<hr><div class="row"><div class=" col-md-2" style=" padding: 10px 10px"><img src="'+imageUrl+'" alt="..." class="card-img-top child-img" style=" margin: auto auto; background-color: #F2F2F2; padding: 10px;border-radius: 10px;"></div><div class=" col-md-8 mt-3"><span style="font-size: 13px;">'+data.productName+'</span><p class="mt-4"><b>'+data.productPrice+' L.E.</b></p><div>Qty: <span><b>'+quantities_arr[j]+'</b> </span></div></div></div>')
+
+  
+    
+    
+    
+
+    
+  }})
+
+
+      }
+
+      
+
+    }
+    
+  }})
+
+
+    </script>
+
+
+</body>
+
+</html>

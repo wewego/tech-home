@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	 <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/form.css" />
+  
+  <title>Sign in</title>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+  />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <title>Sign In</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.min.css" integrity="sha512-HPSfJxnyVYJb4v9afT3fXvs0mXvdg/C7eYxBl1EYS7uQHuCU/0lSGhaH9o23Tw8FofBiGQfFWzMYD9TqK8tv/g==" crossorigin="anony
+mous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.min.js" integrity="sha512-i5xofbBta9oP3xclkdj0jO68kXE1tPeN8Jf3rwzsbwNrpFVifjhklWi8zMOOUscuMQaCPyIXl0TMWFjGwBaJxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <div class="form-floating mb-2 form-control-sm">
+          <p class="fw-bold form-title">Sign In</p>
+        </div>
+        <div class="form-floating mb-3 form-control-sm">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating form-control-sm">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="d-grid gap-2 form-floating pt-3 form-control-sm">
+          <button class="btn btn-submit" type="button" onclick="loginvalidate()">Login</button>
+          <a href="sign_up.html">Don't have an account?</a>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      function validator(input,phoneFlag,zipFlag,emailFlag,name){
+        if (input.length == 0){
+          toastr.error(name + " can't be empty " )
+          return false
+        }
+        else if (input.length < 4){
+          toastr.error(name + " can't be less than 4" )
+          return false
+
+        }
+        if (phoneFlag == true){
+          var phoneno = /^\d{11}$/;
+          if(!(input.value.match(phoneno))){
+          toastr.error("Invalid Phone number format")
+          return false;
+
+        }
+
+        }
+        else if (zipFlag == true){
+          var zip = /^\d{5}$/;
+          if(!(input.value.match(zip))){
+          toastr.error("Invalid Zip number format")
+          return false;
+
+        }
+        
+        return true;
+
+        }
+
+      }
+    	function validateEmail(email) 
+    	{
+        	var re = /\S+@\S+\.\S+/;
+        	return re.test(email);
+    	}
+    	function loginvalidate(){
+    	var emaildata = document.getElementById("email").value;
+    	var passworddata = document.getElementById("password").value;
+    	if (!validateEmail(emaildata)){
+    		toastr.error('Email format is not valid')
+    	}
+    	else{
+    		const data = { email: emaildata , password: passworddata};
+
+fetch('http://ec2-44-208-82-216.compute-1.amazonaws.com/api/auth/login', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then((response) => response.json())
+.then((data) => {
+ 
+  if (data["message"] == "Email & Password does not match with our record."){
+  	toastr.error('Email or Password wrong')
+  }
+  else{
+  	 setCookie("user_id" , data["id"] , 200);
+  	 window.location.href = "home.html";
+
+  }
+})
+.catch((error) => {
+  alert('error')
+});
+
+    	}
+
+
+    	}
+    	    	  function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+    	
+    </script>
+  </body>
+</html>

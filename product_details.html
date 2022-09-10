@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="styles/categories.css" />
+    <link rel="stylesheet" href="styles/product_details.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.min.css" integrity="sha512-HPSfJxnyVYJb4v9afT3fXvs0mXvdg/C7eYxBl1EYS7uQHuCU/0lSGhaH9o23Tw8FofBiGQfFWzMYD9TqK8tv/g==" crossorigin="anony
+mous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.min.js" integrity="sha512-i5xofbBta9oP3xclkdj0jO68kXE1tPeN8Jf3rwzsbwNrpFVifjhklWi8zMOOUscuMQaCPyIXl0TMWFjGwBaJxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      style="
+        height: 90px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      "
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          width="120px"
+          height="80px"
+          src="assets/The Tech Home-logos_transparent.png"
+          alt="Logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse nav-med"
+        style="background: #f8f9fa; padding-left: 15px"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Catagories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="container-div-category">
+                          
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="search-form" onSubmit="return false;">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="search-input"
+          />
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item" id="my-account">
+            <a class="nav-link" href="#"
+              ><img
+                width="30px"
+                src="assets/account-circle-svgrepo-com.svg"
+                alt="account logo"
+              />
+              My Account</a
+            >
+          </li>
+          <li class="nav-item" id="cart">
+            <a class="nav-link" href="#"
+              ><img
+                width="30px"
+                src="assets/cart-svgrepo-com.svg"
+                alt="cart icon"
+              />
+              Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="my-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color: #f4f5f6 !important">
+          <li class="breadcrumb-item active">Home</li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Mobile & Tablets
+          </li>
+        </ol>
+      </nav>
+
+      <!-- details page -->
+      <div class="details row">
+        <div class="col-xl-5 col-md-12">
+          <div class="details-img">
+          </div>
+          <div class="sub-imgs">
+            
+          </div>
+        </div>
+        <div class="col-xl-7 details-content col-md-12">
+          <p class="font-weight-bold text-capitalize" id="product_name">
+          </p>
+          <h3 class="font-weight-bold pt-3" id="product_price"></h3>
+          <p id="product_description">
+          </p>
+          <div class="btns-group">
+            <button class="btn py-3 px-5" id="add-to-cart-btn">Add to cart</button>
+            <button class="btn btn-block" id="buy-now-btn">Buy now</button>
+          </div>
+        </div>
+      </div>
+      <!-- End of details page -->
+
+      <div class="reviews">
+        <h3>Reviews</h3>
+        <div class="d-flex flex-column" id="container-div">
+          </div>
+        </div>
+        <div class="d-flex add-review">
+          <textarea
+            class="form-control mr-3"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+          <button class="btn-review" type="button" id="addcomment">submit</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <ul class="footer">
+        <li>
+          <div>
+            <img
+              width="20%"
+              src="assets/The Tech Home-logos_white.png"
+              alt="logo"
+            />
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero
+              excepturi explicabo totam et perspiciatis eaque officiis nemo
+              consequatur, quo voluptate adipisci reprehenderit dolorem sunt
+              error doloribus? Incidunt, quae reiciendis!
+            </p>
+          </div>
+        </li>
+        <li>
+          <ul class="pages">
+            <li>Home</li>
+            <li>Categories</li>
+            <li>About Us</li>
+          </ul>
+        </li>
+        <li>
+          <p>Get in touch</p>
+          <small>Feedback or questions?</small>
+          <ul class="social">
+            <li>
+              <img src="assets/facebook-svgrepo-com.svg" alt="facebook" />
+            </li>
+            <li>
+              <img src="assets/twitter-svgrepo-com.svg" alt="twiiter" />
+            </li>
+            <li>
+              <img src="assets/youtube-svgrepo-com.svg" alt="youtube" />
+            </li>
+            <li>
+              <img src="assets/instagram-svgrepo-com.svg" alt="instagram" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (getCookie("product_id") == ""){
+        top.location.href = "home.html"
+      }
+      function getCookie(cname){
+        let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+      }
+      fetch('http://ec2-44-208-82-216.compute-1.amazonaws.com/api/product/'+getCookie("product_id"))
+.then(data => {
+return data.json();
+})
+.then(product => {
+  $("#product_description").html(product.productDescription);
+  $("#product_price").html(product.productPrice + " L.E");
+  $("#product_name").html(product.productName);
+  var imageUrl = "http://ec2-44-208-82-216.compute-1.amazonaws.com/storage/" + product.productImageURL
+  $(".details-img").append('<img src="'+imageUrl+'" />');
+  $(".sub-imgs").append('<img src="'+imageUrl+'" />');
+  $(".sub-imgs").append('<img src="'+imageUrl+'" />');
+  $(".sub-imgs").append('<img src="'+imageUrl+'" />');
+  $(".sub-imgs").append('<img src="'+imageUrl+'" />');
+  setCookie("price" , product.productPrice);
+
+});
+ 
+
+
+
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+   function validator(input,phoneFlag,zipFlag,emailFlag,name){
+    if (phoneFlag == true){
+          let isnum = /^\d+$/.test(input);
+          if (!isnum){
+            toastr.error("Invalid Phone number format")
+            awugkwuegwkeurgowkeug()
+            return false;
+
+          }
+         
+          else if (input.length > 11 || input.length < 11){
+            toastr.error("Phone number must be 11 number")
+            awugkwuegwkeurgowkeug()
+            return false
+
+          }
+
+        }
+        else if (zipFlag == true){
+          var zip = /^\d{5}$/;
+          if(!(input.value.match(zip))){
+          toastr.error("Invalid Zip number format")
+          awugkwuegwkeurgowkeug()
+          return false;
+
+        }
+        
+    
+
+        }
+        
+        if (input.length == 0){
+          toastr.error(name + " can't be empty " )
+          awugkwuegwkeurgowkeug()
+          return false
+        }
+        else if (input.length < 4){
+          toastr.error(name + " can't be less than 4" )
+          awugkwuegwkeurgowkeug()
+          return false
+
+        }
+
+        
+return true;
+      }
+  var loopCounter = 0;
+   function getCookie(cname){
+        let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+      }
+      if (getCookie("cart") != ""){
+      	var cart_products = getCookie("cart");
+      var current_product_id = getCookie("product_id");
+      var arr_products = cart_products.split(",");
+      for (var i = 0; i < arr_products.length; i++){
+      	if (current_product_id == arr_products[i]){
+      		$("#add-to-cart-btn"). attr("disabled", true)
+      	}
+      }
+
+      }
+      
+
+
+     function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+
+           $(document).ready(function () {
+             $("#addcomment").click(function () {
+             	var name;
+             	$.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/profile/' + getCookie("user_id"),
+  success: function (data, status, xhr) {
+    
+      name = JSON.stringify(data.name);
+      name = name.replace(/^"(.*)"$/, '$1');
+  }
+});
+                 var comments = new Object();
+                 comments.comment = $('#exampleFormControlTextarea1').val();
+                 validator(comments.comment,false,false,false,"Comment") 
+                 $('#exampleFormControlTextarea1').val('');
+                 comments.product_id = getCookie("product_id");
+                 comments.user_id = getCookie("user_id");
+                 $.ajax({
+                     url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/comment/',
+                     type: 'POST',
+                     dataType: 'json',
+                     data: comments,
+                     success: function (data, textStatus, xhr) {
+                     	var commentat = comments.comment;
+                     	commentat = commentat.replace(/^"(.*)"$/, '$1');
+                      $('#container-div').append('<div class="review-card"><p>'+commentat+'</p><div class="d-flex align-items-center"><img src="assets/person.svg" alt="person" /><span class="ml-2">'+name+'</span></div></div>');
+                     },
+                     error: function (xhr, textStatus, errorThrown) {
+                         console.log('Error in Operation');
+                     }
+                 });
+             });
+            
+             $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/comments/' + getCookie("product_id"),
+  success: function (data, status, xhr) {
+    for (var i = 0; i < data.length; i++){
+      if (getCookie("comments") == ""){
+        var commentat = JSON.stringify(data[i].comment);
+        commentat = commentat.replace(/^"(.*)"$/, '$1');
+    setCookie("comments" , commentat , 200);
+    var user_id = JSON.stringify(data[i].user_id);
+        user_id = user_id.replace(/^"(.*)"$/, '$1');
+    setCookie("comment_user_id" , user_id , 200);
+  }
+  
+  else{
+    var keycookie = getCookie("comments");
+    var commentat = JSON.stringify(data[i].comment);
+    commentat = commentat.replace(/^"(.*)"$/, '$1');
+    keycookie = keycookie + "," + commentat;
+    document.cookie = "comments=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    setCookie("comments" , keycookie , 200);
+
+    var keycookies = getCookie("comment_user_id");
+    var user_id = JSON.stringify(data[i].user_id);
+    user_id = user_id.replace(/^"(.*)"$/, '$1');
+    keycookies = keycookies + "," + user_id;
+    document.cookie = "comment_user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    setCookie("comment_user_id" , keycookies , 200);
+  }
+    }
+   
+    var index = 0;
+    var commentIndex = 0;
+    
+    for (var k = 0; k<data.length; k++){
+      setTimeout(function (){
+                    var names;
+        var user_ids = getCookie("comment_user_id");
+    var user_id_arr = user_ids.split(",");
+        var user_id = user_id_arr[index];
+        //alert(index)
+        index++;
+        
+        
+           $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/profile/' + user_id,
+  success: function (data, status, xhr) {
+    var commentss = getCookie("comments");
+    var commentss_arr = commentss.split(",");
+    if (data.profileImageUrl == ""){
+      $('#container-div').append('<div class="review-card"><p>'+commentss_arr[commentIndex]+'</p><div class="d-flex align-items-center"><img src="assets/person.svg" alt="person" /><span class="ml-2">' + data.name + '</span></div></div>');
+
+    }
+    else{
+      $('#container-div').append('<div class="review-card"><p>'+commentss_arr[commentIndex]+'</p><div class="d-flex align-items-center"><img src="'+data.profileImageUrl+'" style="width:30px;height:30px;border-radius:10px;" /><span class="ml-2">' + data.name + '</span></div></div>');
+    }
+
+    
+    commentIndex++;
+    /*
+    if (getCookie("comment_user_name") == ""){
+    setCookie("comment_user_name" , data.name , 200);
+  }
+  else{
+    var keycookies = getCookie("comment_user_name");
+    keycookies = keycookies + "," + data.name;
+    document.cookie = "comment_user_name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    setCookie("comment_user_name" , keycookies , 200);
+  }
+    
+      */
+  }
+});
+            //var commentat = getCookie("comments");
+    //var commentatArr = commentat.split(",");
+    //var names = getCookie("comment_user_name");
+    
+    //var namesArr = names.split(",");
+   /* if (loopCounter == 0){
+       for (var j = 0; j < commentatArr.length; j++){
+      $('#container-divssssssssss').append('<div class="review-card"><p>'+'</p><div class="d-flex align-items-center"><img src="assets/person.svg" alt="person" /><span class="ml-2">' + '</span></div></div>');
+                  }
+                  loopCounter++;
+
+    }*/
+   
+
+    }
+    , 500)
+        
+
+    	
+
+      
+      
+    }
+  }
+});
+
+         });
+
+           $('#my-account').click(function(){
+
+
+  top.location.href="my-account.html";
+
+
+});
+$('#cart').click(function(){
+top.location.href="cart.html";
+});
+$('#add-to-cart-btn').click(function(){
+	if (getCookie("cart") == ""){
+		setCookie("cart" , getCookie("product_id") , 200);
+		$("#add-to-cart-btn"). attr("disabled", true)
+	}
+	else{
+		var keycookie = getCookie("cart");
+		keycookie = keycookie + "," + getCookie("product_id");
+		document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		setCookie("cart" , keycookie , 200);
+		$("#add-to-cart-btn"). attr("disabled", true)
+	}
+
+});
+$('#buy-now-btn').click(function(){
+  if (getCookie("cart") == ""){
+    var cookiee = getCookie("cart");
+    var cookieArr = cookiee.split(",");
+    for (var i = 0; i < cookieArr.length; i++){
+      if (Number(cookieArr[i]) == Number(getCookie("product_id"))){
+        top.location.href = "cart.html"
+      
+      }
+    }
+    setCookie("cart" , getCookie("product_id") , 200);
+    top.location.href = "cart.html"
+  }
+  else{
+    var flag = true;
+    var cookiee = getCookie("cart");
+    var cookieArr = cookiee.split(",");
+    for (var i = 0; i < cookieArr.length; i++){
+      if (Number(cookieArr[i]) == Number(getCookie("product_id"))){
+        top.location.href = "cart.html"
+        flag = false;
+      }
+    }
+    if (flag == true){
+      var keycookie = getCookie("cart");
+    keycookie = keycookie + "," + getCookie("product_id");
+    document.cookie = "cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    setCookie("cart" , keycookie , 200);
+    top.location.href = "cart.html"
+
+    }
+    
+  }
+
+});
+$('#navbarDropdown').click(function(){
+   $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/',
+  success: function (data, status, xhr) {
+    var html = ''
+    for (var i = 0; i<data.length; i++){
+      document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      setCookie("category" , data[i].id);
+      var cat = JSON.stringify(data[i].categoryName);
+      cat = cat.replace(/^"(.*)"$/, '$1');
+      html = html + ' <a class="dropdown-item" href="categories.html">' + cat + '</a>'
+      
+
+    }
+    $('#container-div-category').html(html);
+  }
+});
+
+         });
+$("#search-form").keypress(function(e){
+  document.cookie = "search=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  
+  if (e.keyCode == 13 && searchInput != ""){
+    var searchInput = $("#search-input").val()
+    setCookie("search" , searchInput ,200);
+    top.location.href="home.html"
+  }
+});
+document.cookie = "comments=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+document.cookie = "comment_user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+//document.cookie = "comment_user_name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="styles/categories.css" />
+    <link rel="stylesheet" href="styles/products.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      style="height: 90px"
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          width="120px"
+          height="80px"
+          src="assets/The Tech Home-logos_transparent.png"
+          alt="Logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse nav-med"
+        style="background: #f8f9fa; padding-left: 15px"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Catagories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+              
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" onSubmit="return false;">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="search-form"
+          />
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item" id="my-account">
+            <a class="nav-link" href="#"
+              ><img
+                width="30px"
+                src="assets/account-circle-svgrepo-com.svg"
+                alt="account logo"
+              />
+              My Account</a
+            >
+          </li>
+          <li class="nav-item" id="cart">
+            <a class="nav-link" href="#"
+              ><img
+                width="30px"
+                src="assets/cart-svgrepo-com.svg"
+                alt="cart icon"
+              />
+              Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Content -->
+
+    <section class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="background-color: #fff !important">
+          <li class="breadcrumb-item active">Home</li>
+          <li class="breadcrumb-item active" aria-current="page" id="category-name">
+            
+          </li>
+        </ol>
+      </nav>
+      <div class="row">
+        <div class="col-2.5">
+          <button class="accordion activee">Categories</button>
+          <div class="panel" style="max-height: fit-content; font-size: 16px">
+            <ul style="list-style: none" id="category-container-checkbox">
+              
+            </ul>
+          </div>
+
+          
+          
+        </div>
+        <div class="col">
+          <div class="collections-item">
+            <div class="d-flex">
+              <h5 class="mr-2" id="h55"></h5>
+              
+            </div>
+            <div class="products" id="products-container">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul class="footer">
+        <li>
+          <div>
+            <img
+              width="20%"
+              src="assets/The Tech Home-logos_white.png"
+              alt="logo"
+            />
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero
+              excepturi explicabo totam et perspiciatis eaque officiis nemo
+              consequatur, quo voluptate adipisci reprehenderit dolorem sunt
+              error doloribus? Incidunt, quae reiciendis!
+            </p>
+          </div>
+        </li>
+        <li>
+          <ul class="pages">
+            <li>Home</li>
+            <li>Catagories</li>
+            <li>About Us</li>
+            <li id="test"></li>
+          </ul>
+        </li>
+        <li>
+          <p>Get in touch</p>
+          <small>Feedback or questions?</small>
+          <ul class="social">
+            <li>
+              <img src="assets/facebook-svgrepo-com.svg" alt="facebook" />
+            </li>
+            <li>
+              <img src="assets/twitter-svgrepo-com.svg" alt="twiiter" />
+            </li>
+            <li>
+              <img src="assets/youtube-svgrepo-com.svg" alt="youtube" />
+            </li>
+            <li>
+              <img src="assets/instagram-svgrepo-com.svg" alt="instagram" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var acc = document.getElementsByClassName('accordion');
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function () {
+          this.classList.toggle('activee');
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      }
+    </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      function getCookie(cname){
+        let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+      }
+      function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+      $('#my-account').click(function(){
+top.location.href="my-account.html";
+});
+$('#cart').click(function(){
+top.location.href="cart.html";
+});
+$('#navbarDropdown').click(function(){
+   $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/',
+  success: function (data, status, xhr) {
+    var html = ''
+    for (var i = 0; i<data.length; i++){
+      document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      setCookie("category" , data[i].id);
+      var cat = JSON.stringify(data[i].categoryName);
+      cat = cat.replace(/^"(.*)"$/, '$1');
+      html = html + ' <a class="dropdown-item" href="categories.html">' + cat + '</a>'
+      
+
+    }
+    $('#container-div-category').html(html);
+  }
+});
+
+         });
+$("#search-form").keypress(function(e){
+  document.cookie = "search=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  
+  if (e.keyCode == 13 && searchInput != ""){
+    var searchInput = $("#search-input").val()
+    setCookie("search" , searchInput ,200);
+    top.location.href="home.html"
+  }
+});
+$.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/',
+  success: function (data, status, xhr) {
+    var html = ''
+    for (var i = 0; i<data.length; i++){
+      document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      setCookie("category" , data[i].id);
+      var cat = JSON.stringify(data[i].categoryName);
+      cat = cat.replace(/^"(.*)"$/, '$1');
+      $('#category-container-checkbox').append('<li class="my-2"><a href="#" onclick="category_product_handler('+data[i].id+')">'+cat+'</a></li>');
+      
+      
+
+    }
+    
+  }
+});
+function category_product_handler(category_id){
+  $("#products-container").empty();
+  $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/'+category_id,
+  success: function (data, status, xhr) {
+    $("#category-name").html(data.categoryName);
+    $("#h55").html(data.categoryName);
+    
+  }
+});
+  
+   $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/searchcategory/' + category_id,
+  success: function (data, status, xhr) {
+    var product_ids = "";
+    for (var i = 0; i<data.length; i++){
+      if (i == 0){
+        product_ids = product_ids + data[i].product_id
+
+      }
+      else{
+        product_ids = product_ids + "," + data[i].product_id 
+      }
+      
+      
+
+    }
+    if (getCookie("product_ids") == ""){
+      $("#products-container").empty();
+      setCookie("product_ids" , product_ids , 200);
+      display_products()
+
+    }
+    
+    else{
+      $("#products-container").empty();
+      document.cookie = "product_ids=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+      setCookie("product_ids" , product_ids , 200);
+      display_products()
+    }
+        
+      }
+});
+
+
+
+}
+function display_products(){
+  var products = getCookie("product_ids");
+  var products_arr = products.split(",");
+  for (var i = 0; i < products_arr.length; i++){
+
+    $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/product/' + products_arr[i],
+  success: function (data, status, xhr) {
+    var imageUrl = "http://ec2-44-208-82-216.compute-1.amazonaws.com/storage/" + data.productImageURL
+    $("#products-container").append('<div class="product-item" onclick="productdetails('+data.id+')"><img src="'+imageUrl+'" /><p>'+data.productName+'</p><p>'+data.productPrice+' LE</p></div>')
+    
+      
+      
+
+      
+
+
+         
+
+             
+
+      
+                     
+                
+   
+    
+  }
+});
+
+  }
+
+}
+$.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/product/',
+  success: function (data, status, xhr) {
+    for (var i = 0; i < data.length; i++){
+      var imageUrl = "http://ec2-44-208-82-216.compute-1.amazonaws.com/storage/" + data[i].productImageURL
+    $("#products-container").append('<div class="product-item" onclick="productdetails('+data[i].id+')"><img src="'+imageUrl+'" /><p>'+data[i].productName+'</p><p>'+data[i].productPrice+' LE</p></div>')
+
+    }
+    
+    
+      
+      
+
+      
+
+
+         
+
+             
+
+      
+                     
+                
+   
+    
+  }
+});
+function productdetails(product_id){
+        document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        setCookie("product_id",product_id , 200);
+        window.location.href = "product_details.html";
+
+      }
+    </script>
+  </body>
+</html>

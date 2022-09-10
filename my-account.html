@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>My Account</title>
+    <link rel="icon" href="img/Intersection-1@2x.png" type="icon">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/allfontawesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.min.css" integrity="sha512-HPSfJxnyVYJb4v9afT3fXvs0mXvdg/C7eYxBl1EYS7uQHuCU/0lSGhaH9o23Tw8FofBiGQfFWzMYD9TqK8tv/g==" crossorigin="anony
+mous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.min.js" integrity="sha512-i5xofbBta9oP3xclkdj0jO68kXE1tPeN8Jf3rwzsbwNrpFVifjhklWi8zMOOUscuMQaCPyIXl0TMWFjGwBaJxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="./pages/home.html" style="margin-right: 50px;">
+                <img src="img/Intersection-1@2x.png" alt="Intersection-1" style="width:135px ; height:45px;">
+            </a>
+
+            <!-- toggler button-->
+            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                <!--start Categories -->
+                <span class="nav-cards dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="font-weight: bold;" id="navbarDropdown">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" style="text-align: center;" id="container-div">
+                        
+                    </ul>
+                </span>
+                <!--End Categories -->
+
+                <!--Start Input search -->
+                <form class="d-flex" role="search" style="width: 50%;" id="search-form" onSubmit="return false;">
+                    <input class="form-control me-2 input-search-bar" type="search"
+                        placeholder="Search for products or brands" aria-label="Search" id="search-input">
+                    <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+                </form>
+                <!--End Input search -->
+
+                <!-- Start My Account -->
+                <span class="d-flex my-acccount">
+
+                    <a class="nav-link active" aria-current="page" href="my-account.html"
+                        style="font-weight: bold; font-size: 13px;"> <i class="fa-solid fa-circle-user"
+                            style="margin: 5px 5px 0 0;"></i> My
+                        Account</a>
+                </span>
+                <!-- End My Account -->
+
+                <!-- Start Cart -->
+                <span class="d-flex my-acccount">
+
+                    <a class="nav-link active" aria-current="page" href="cart.html"
+                        style="font-weight: bold; font-size: 13px;"><i class="fa-solid fa-cart-shopping"
+                            style="margin: 5px 5px 0 0;"></i> Cart</a>
+                    </li>
+                </span>
+                <!-- End Cart -->
+
+
+                
+            </div>
+        </div>
+    </nav>
+    <!-- END Navbar -->
+
+    <!-- Start Content -->
+    <div class="content home  producs-view" style="padding:50px 0 0 0;">
+        <div class="container" style="padding-bottom: 179px;">
+
+            <!-- Start Back Button -->
+            <div style="margin: -20px 0 30px 0;">
+                <form>
+                    <input type="button" value="&lt; Back" style="color:rgb(112, 101, 101); font-weight:bold; background-color: transparent;
+                                border-color: transparent;" onclick="history.back()">
+                </form>
+            </div>
+            <!-- End Back Button -->
+
+
+
+            <div class="row">
+                <!--Start button My account-->
+                <div class="col-12 col-md-3 mb-5">
+                    <a href="my-account.html">
+                        <div style="background-color: #EDEDED; border-color: #fff;">
+                            <button type=" button" class="btn buy-now  "
+                                style=" color: #000; border-color: transparent;"><b>My account</b></button>
+                        </div>
+                    </a>
+                    <a href="orders.html">
+                        <div style="background-color: #fff; border-color: #fff;">
+                            <button type=" button" class="btn buy-now  "
+                                style=" color: #000; border-color: transparent;">Orders</button>
+                        </div>
+                    </a>
+
+                </div>
+                <!--End button My account -->
+
+
+                <!-- Start Account Information-->
+                <div class="col-12 col-md-9 " style="margin-bottom: 10px; ">
+                    <div style="background-color: #fff;border-radius: 10px; border-color: #fff;padding: 20px;">
+                        <span style="font-weight:bold; font-size:20px ; margin-right: 10px;">Account Information</span>
+
+
+                        <hr>
+
+                        <div class="row">
+
+                            <div class="mt-3 col-md-3" style=" padding: 10px 10px">
+                               <img style="width:155px ; height:150px; background-color: #EDEDED; padding:5px 5px; border-radius: 10px;" id="output">
+                            
+
+                                <!--default html file upload button-->
+
+<input type="file" accept="image/*" onchange='fileChange()' id="input_img" style=" color: white; padding: 0.5rem; font-family: sans-serif; border-radius: 0.3rem; cursor: pointer; margin-top: 2rem;"  />
+
+<!--our custom file upload button-->
+<!--<label for="actual-btn" style="background-color: #FF9900; color: white; padding: 0.5rem; font-family: sans-serif; border-radius: 0.3rem; cursor: pointer; margin-top: 1rem;">Choose File</label>-->
+<!--<span style="margin-left: 0.3rem; font-family: sans-serif;" id="file-chosen">No file chosen</span>-->
+
+
+
+                                
+                            </div>
+
+                            <div class=" col-md-9 mt-3">
+                                <div class="row" id="personal-info-div">
+
+
+
+
+                                </div>
+                            </div>
+
+                            <hr class="mb-2 mt-5">
+                            <div class="text-end">
+                                <button type=" button" class="btn btn-secondary  mt-4 mb-2 me-2"
+                                    style="background-color: #FF9900;   border-color: transparent; font-size: 15px; padding: 7px 50px;" id="save">Save</button>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+                <!-- End  Account Information-->
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <img src="img/Intersection-2@2x.png" alt="Intersection-2@2x"
+                        style="width: 163px; height:55px; margin-bottom: 20px;">
+                    <p style="font-size: 15px;">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit&#44;
+                        sed do
+                        <br> eiusmod tempor
+                        incididunt
+                        ut
+                        labore et <br> dolore magna aliqua. Ut enim ad minim
+                    </p>
+                </div>
+                <div class="col-md-5 col-12 info">
+                    <a href="">Home</a>
+                    <a href="">Categories</a>
+                    <a href="">About Us</a>
+                </div>
+                <div class="col-md-3 col-12 touch">
+                    <h5 style="margin-bottom: 20px;">Get in touch</h5>
+                    <span>Feedback or questions&#63; just hit <br> us now</span>
+                    <div class="social" style="margin-top: 25px;">
+                        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Footer -->
+
+
+    <!-- Script -->
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function fileChange(){
+        var file = document.getElementById('input_img');
+        var form = new FormData();
+        form.append("image", file.files[0])
+
+        var settings = {
+          "url": "https://api.imgbb.com/1/upload?key=b071be9dd819386828613f5e2fdc5b9b",
+          "method": "POST",
+          "timeout": 0,
+          "processData": false,
+          "mimeType": "multipart/form-data",
+          "contentType": false,
+          "data": form
+        };
+
+        $.ajax(settings).done(function (response) {
+          var jx = JSON.parse(response);
+          //alert(jx.data.url);
+          $("#output").attr("src",jx.data.url);
+          if (getCookie("img-url") == ""){
+            document.cookie = "img-url=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+          }
+          setCookie("img-url" , jx.data.url);
+        });
+        }
+    	
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+         function validateEmail(email) 
+      {
+          var re = /\S+@\S+\.\S+/;
+          return re.test(email);
+      }
+      function validator(input,phoneFlag,zipFlag,emailFlag,name){
+    if (phoneFlag == true){
+          let isnum = /^\d+$/.test(input);
+          if (!isnum){
+            toastr.error("Invalid Phone number format")
+            awugkwuegwkeurgowkeug()
+            return false;
+
+          }
+         
+          else if (input.length > 11 || input.length < 11){
+            toastr.error("Phone number must be 11 number")
+            awugkwuegwkeurgowkeug()
+            return false
+
+          }
+
+        }
+        else if (zipFlag == true){
+          var zip = /^\d{5}$/;
+          if(!(input.value.match(zip))){
+          toastr.error("Invalid Zip number format")
+          awugkwuegwkeurgowkeug()
+          return false;
+
+        }
+        
+    
+
+        }
+        
+        if (input.length == 0){
+          toastr.error(name + " can't be empty " )
+          awugkwuegwkeurgowkeug()
+          return false
+        }
+        else if (input.length < 4){
+          toastr.error(name + " can't be less than 4" )
+          awugkwuegwkeurgowkeug()
+          return false
+
+        }
+
+        
+return true;
+      }
+         function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+        if (getCookie("user_id") == ""){
+            top.location.href = "sign_in.html";
+        }
+    	function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+    	$(document).ready(function () {
+             $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/profile/' + getCookie("user_id"),
+  success: function (data, status, xhr) {
+    
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">Name</label><input type="text" id="name" class="form-control" placeholder="Name" value=' + JSON.stringify(data.name) + '></div>');
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">email</label><input type="text" id="email" class="form-control" placeholder="Email" value=' + JSON.stringify(data.email) + '></div>');
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">Phone</label><input id="phone" type="text" class="form-control" placeholder="Phone" value=' + JSON.stringify(data.phonenumber) + '></div>');
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">Area</label><input type="text" class="form-control" id="area" placeholder="Area" value=' + JSON.stringify(data.area) + '></div>');
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">City</label><input type="text" class="form-control" id="city" placeholder="City" value=' + JSON.stringify(data.city) + '></div>');
+      $('#personal-info-div').append('<div class="mb-3 col-12 col-md-6"><label class="form-label">Country</label><input id="country" type="text" class="form-control" placeholder="Country" value=' + JSON.stringify(data.country) + '></div>');
+      if (data.profileImageUrl == ""){
+        $("#output").attr("src","img/default.jpg");
+      }
+      else{
+        $("#output").attr("src",data.profileImageUrl);
+
+      }
+      
+    
+  }
+});
+              $("#save").click(function () {
+                 var users = new Object();
+                 users.name = $('#name').val();
+                 users.email = $('#email').val();
+                 users.phonenumber = $('#phone').val();
+                 users.city = $('#city').val();
+                 users.country = $('#country').val();
+                 users.area = $('#area').val();
+                 validator(users.name,false,false,false,"Name") 
+                 validator(users.email,false,false,false,"Email") 
+                 validator(users.phonenumber,true,false,false,"Phone") 
+                 validator(users.city,false,false,false,"City") 
+                 validator(users.country,false,false,false,"Country") 
+                 validator(users.area,false,false,false,"Area")
+                 if (!validateEmail(users.email)){
+                toastr.error('Email format is not valid')
+                owureghwkouegf()
+                }
+
+
+
+
+                 users.profileImageUrl = getCookie("img-url");
+                 $.ajax({
+                     url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/profile/' + getCookie("user_id"),
+                     type: 'PUT',
+                     dataType: 'json',
+                     data: users,
+                     success: function (data, textStatus, xhr) {
+                      toastr.success('Your info has been updated')
+                     },
+                     error: function (xhr, textStatus, errorThrown) {
+                         console.log('Error in Operation');
+                     }
+                 });
+             });
+
+         });
+        $('#navbarDropdown').click(function(){
+   $.ajax({
+              type: 'GET',
+    
+  url: 'http://ec2-44-208-82-216.compute-1.amazonaws.com/api/category/',
+  success: function (data, status, xhr) {
+    var html = ''
+    for (var i = 0; i<data.length; i++){
+      document.cookie = "product_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      setCookie("category" , data[i].id);
+      var cat = JSON.stringify(data[i].categoryName);
+      cat = cat.replace(/^"(.*)"$/, '$1');
+      html = html + '<li><a class="dropdown-cards" href="categories.html" style="color: #000; text-decoration: none;">'+cat+'</a></li>'
+      
+
+    }
+    $('#container-div').html(html);
+  }})
+});
+        //id="search-form" onSubmit="return false;"
+        $("#search-form").keypress(function(e){
+  document.cookie = "search=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  
+  if (e.keyCode == 13 && searchInput != ""){
+    var searchInput = $("#search-input").val()
+    setCookie("search" , searchInput ,200);
+    top.location.href="home.html"
+  }
+});
+    </script>
+
+
+</body>
+
+</html>
